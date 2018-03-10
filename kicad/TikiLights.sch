@@ -1,0 +1,191 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:Tag-Connect
+LIBS:stm32f030
+LIBS:stm32f100
+LIBS:stm32f103
+LIBS:stm32
+LIBS:TikiLights-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L TC2030-CTX P1
+U 1 1 5A936128
+P 10000 1250
+F 0 "P1" H 9950 1050 40  0000 L CNN
+F 1 "TC2030-CTX" H 10000 1450 40  0000 C CNN
+F 2 "Tag-Connect:TC2030-NL_SMALL" H 10000 1250 60  0001 C CNN
+F 3 "" H 10000 1250 60  0001 C CNN
+	1    10000 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C2
+U 1 1 5A99BA77
+P 5450 6950
+F 0 "C2" H 5475 7050 50  0000 L CNN
+F 1 "C" H 5475 6850 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5488 6800 50  0001 C CNN
+F 3 "" H 5450 6950 50  0001 C CNN
+	1    5450 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1
+U 1 1 5A99BBC3
+P 4850 6950
+F 0 "C1" H 4875 7050 50  0000 L CNN
+F 1 "0.47µF" H 4875 6850 50  0000 L CNN
+F 2 "Housings_QFP:TQFP-48_7x7mm_Pitch0.5mm" H 4888 6800 50  0001 C CNN
+F 3 "" H 4850 6950 50  0001 C CNN
+	1    4850 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 5A99BD6A
+P 4850 7350
+F 0 "#PWR01" H 4850 7100 50  0001 C CNN
+F 1 "GND" H 4850 7200 50  0000 C CNN
+F 2 "" H 4850 7350 50  0001 C CNN
+F 3 "" H 4850 7350 50  0001 C CNN
+	1    4850 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 5A99BD8B
+P 5450 7350
+F 0 "#PWR02" H 5450 7100 50  0001 C CNN
+F 1 "GND" H 5450 7200 50  0000 C CNN
+F 2 "" H 5450 7350 50  0001 C CNN
+F 3 "" H 5450 7350 50  0001 C CNN
+	1    5450 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR03
+U 1 1 5A99BDAA
+P 3700 6650
+F 0 "#PWR03" H 3700 6400 50  0001 C CNN
+F 1 "GND" H 3700 6500 50  0000 C CNN
+F 2 "" H 3700 6650 50  0001 C CNN
+F 3 "" H 3700 6650 50  0001 C CNN
+	1    3700 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR04
+U 1 1 5A99BDDF
+P 4850 6500
+F 0 "#PWR04" H 4850 6350 50  0001 C CNN
+F 1 "+3V3" H 4850 6640 50  0000 C CNN
+F 2 "" H 4850 6500 50  0001 C CNN
+F 3 "" H 4850 6500 50  0001 C CNN
+	1    4850 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR05
+U 1 1 5A99BE00
+P 5450 6500
+F 0 "#PWR05" H 5450 6350 50  0001 C CNN
+F 1 "+3V3" H 5450 6640 50  0000 C CNN
+F 2 "" H 5450 6500 50  0001 C CNN
+F 3 "" H 5450 6500 50  0001 C CNN
+	1    5450 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR06
+U 1 1 5A99C181
+P 8900 2900
+F 0 "#PWR06" H 8900 2750 50  0001 C CNN
+F 1 "+3V3" H 8900 3040 50  0000 C CNN
+F 2 "" H 8900 2900 50  0001 C CNN
+F 3 "" H 8900 2900 50  0001 C CNN
+	1    8900 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 6500 4850 6800
+Wire Wire Line
+	5450 6500 5450 6800
+Wire Wire Line
+	4850 7100 4850 7350
+Wire Wire Line
+	5450 7100 5450 7350
+Wire Wire Line
+	3500 6250 3500 6400
+Wire Wire Line
+	3500 6400 3900 6400
+Wire Wire Line
+	3700 6400 3700 6650
+Wire Wire Line
+	3900 6400 3900 6250
+Connection ~ 3700 6400
+Wire Wire Line
+	8750 3600 8750 3300
+Wire Wire Line
+	8750 3300 8950 3300
+Wire Wire Line
+	8900 3300 8900 2900
+Wire Wire Line
+	8950 3300 8950 3600
+Connection ~ 8900 3300
+Wire Wire Line
+	9150 3600 9150 3300
+Wire Wire Line
+	9150 3300 8900 3300
+$Comp
+L STM32F030C6Tx U1
+U 1 1 5A99E918
+P 5200 3250
+F 0 "U1" H 5200 3350 50  0000 C CNN
+F 1 "STM32F030C6Tx" H 5200 3150 50  0000 C CNN
+F 2 "Housings_QFP:TQFP-48_7x7mm_Pitch0.5mm" H 5200 3050 50  0000 C CIN
+F 3 "" H 5200 3250 50  0000 C CNN
+	1    5200 3250
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
