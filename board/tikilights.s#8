@@ -3587,76 +3587,64 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <wire x1="218.44" y1="185.42" x2="218.44" y2="177.8" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="SWDCLK" class="0">
 <segment>
 <pinref part="JP3" gate="G$1" pin="5"/>
 <wire x1="43.18" y1="167.64" x2="55.88" y2="167.64" width="0.1524" layer="91"/>
+<label x="50.8" y="167.64" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="JP3" gate="G$1" pin="3"/>
-<wire x1="43.18" y1="162.56" x2="55.88" y2="162.56" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="JP3" gate="G$1" pin="2"/>
-<wire x1="43.18" y1="160.02" x2="55.88" y2="160.02" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="JP3" gate="G$1" pin="1"/>
-<wire x1="43.18" y1="157.48" x2="55.88" y2="157.48" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="U$4" gate="G$1" pin="NRST"/>
-<wire x1="114.3" y1="167.64" x2="106.68" y2="167.64" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$10" class="0">
-<segment>
-<pinref part="U$4" gate="G$1" pin="PA7"/>
-<wire x1="152.4" y1="157.48" x2="167.64" y2="157.48" width="0.1524" layer="91"/>
-<label x="160.02" y="157.48" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$11" class="0">
-<segment>
-<pinref part="U$4" gate="G$1" pin="PA5"/>
-<wire x1="152.4" y1="162.56" x2="167.64" y2="162.56" width="0.1524" layer="91"/>
-<label x="160.02" y="162.56" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$12" class="0">
 <segment>
 <pinref part="U$4" gate="G$1" pin="PA14"/>
 <wire x1="152.4" y1="147.32" x2="167.64" y2="147.32" width="0.1524" layer="91"/>
 <label x="160.02" y="147.32" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$13" class="0">
+<net name="SWDIO" class="0">
+<segment>
+<pinref part="JP3" gate="G$1" pin="3"/>
+<wire x1="43.18" y1="162.56" x2="55.88" y2="162.56" width="0.1524" layer="91"/>
+<label x="50.8" y="162.56" size="1.778" layer="95"/>
+</segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="PA13"/>
 <wire x1="152.4" y1="149.86" x2="167.64" y2="149.86" width="0.1524" layer="91"/>
 <label x="160.02" y="149.86" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$1" class="0">
+<net name="NRST" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="DI"/>
-<wire x1="38.1" y1="109.22" x2="25.4" y2="109.22" width="0.1524" layer="91"/>
-<label x="17.78" y="109.22" size="1.778" layer="95"/>
+<pinref part="U$4" gate="G$1" pin="NRST"/>
+<wire x1="114.3" y1="167.64" x2="106.68" y2="167.64" width="0.1524" layer="91"/>
+<label x="106.68" y="167.64" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="JP3" gate="G$1" pin="2"/>
+<wire x1="43.18" y1="160.02" x2="55.88" y2="160.02" width="0.1524" layer="91"/>
+<label x="50.8" y="160.02" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$3" class="0">
+<net name="LED_DATA" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="CI"/>
-<wire x1="38.1" y1="104.14" x2="25.4" y2="104.14" width="0.1524" layer="91"/>
-<label x="17.78" y="104.14" size="1.778" layer="95"/>
+<pinref part="U$4" gate="G$1" pin="PA7"/>
+<wire x1="152.4" y1="157.48" x2="167.64" y2="157.48" width="0.1524" layer="91"/>
+<label x="160.02" y="157.48" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="A1"/>
+<wire x1="205.74" y1="162.56" x2="190.5" y2="162.56" width="0.1524" layer="91"/>
+<label x="190.5" y="162.56" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="LED_CLK" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="PA5"/>
+<wire x1="152.4" y1="162.56" x2="167.64" y2="162.56" width="0.1524" layer="91"/>
+<label x="160.02" y="162.56" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="A2"/>
+<wire x1="205.74" y1="160.02" x2="190.5" y2="160.02" width="0.1524" layer="91"/>
+<label x="190.5" y="160.02" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -3785,28 +3773,24 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <wire x1="317.5" y1="104.14" x2="325.12" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$30" class="0">
+<net name="LED_DATA_EYES" class="0">
 <segment>
 <pinref part="U$31" gate="G$1" pin="DO"/>
 <wire x1="347.98" y1="109.22" x2="360.68" y2="109.22" width="0.1524" layer="91"/>
 <label x="355.6" y="109.22" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="N$31" class="0">
-<segment>
-<pinref part="U$31" gate="G$1" pin="CO"/>
-<wire x1="347.98" y1="104.14" x2="360.68" y2="104.14" width="0.1524" layer="91"/>
-<label x="355.6" y="104.14" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$32" class="0">
 <segment>
 <pinref part="U$7" gate="G$1" pin="DI"/>
 <wire x1="38.1" y1="71.12" x2="27.94" y2="71.12" width="0.1524" layer="91"/>
 <label x="17.78" y="71.12" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$33" class="0">
+<net name="LED_CLK_EYES" class="0">
+<segment>
+<pinref part="U$31" gate="G$1" pin="CO"/>
+<wire x1="347.98" y1="104.14" x2="360.68" y2="104.14" width="0.1524" layer="91"/>
+<label x="355.6" y="104.14" size="1.778" layer="95"/>
+</segment>
 <segment>
 <pinref part="U$7" gate="G$1" pin="CI"/>
 <wire x1="38.1" y1="66.04" x2="27.94" y2="66.04" width="0.1524" layer="91"/>
@@ -3939,32 +3923,28 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <wire x1="264.16" y1="71.12" x2="266.7" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$52" class="0">
+<net name="LED_DATA_MOUTH" class="0">
+<segment>
+<pinref part="U$17" gate="G$1" pin="DI"/>
+<wire x1="38.1" y1="33.02" x2="27.94" y2="33.02" width="0.1524" layer="91"/>
+<label x="20.32" y="33.02" size="1.778" layer="95"/>
+</segment>
 <segment>
 <pinref part="U$16" gate="G$1" pin="DO"/>
 <wire x1="289.56" y1="71.12" x2="302.26" y2="71.12" width="0.1524" layer="91"/>
 <label x="297.18" y="71.12" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$53" class="0">
-<segment>
-<pinref part="U$16" gate="G$1" pin="CO"/>
-<wire x1="289.56" y1="66.04" x2="302.26" y2="66.04" width="0.1524" layer="91"/>
-<label x="297.18" y="66.04" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$54" class="0">
-<segment>
-<pinref part="U$17" gate="G$1" pin="DI"/>
-<wire x1="38.1" y1="33.02" x2="27.94" y2="33.02" width="0.1524" layer="91"/>
-<label x="20.32" y="33.02" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$55" class="0">
+<net name="LED_CLK_MOUTH" class="0">
 <segment>
 <pinref part="U$17" gate="G$1" pin="CI"/>
 <wire x1="38.1" y1="27.94" x2="27.94" y2="27.94" width="0.1524" layer="91"/>
 <label x="20.32" y="27.94" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$16" gate="G$1" pin="CO"/>
+<wire x1="289.56" y1="66.04" x2="302.26" y2="66.04" width="0.1524" layer="91"/>
+<label x="297.18" y="66.04" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$56" class="0">
@@ -4093,32 +4073,28 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <wire x1="264.16" y1="27.94" x2="266.7" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$75" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="A1"/>
-<wire x1="205.74" y1="162.56" x2="190.5" y2="162.56" width="0.1524" layer="91"/>
-<label x="190.5" y="162.56" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$76" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="A2"/>
-<wire x1="205.74" y1="160.02" x2="190.5" y2="160.02" width="0.1524" layer="91"/>
-<label x="190.5" y="160.02" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$77" class="0">
+<net name="LED_CLK_5V" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="B2"/>
 <wire x1="236.22" y1="160.02" x2="251.46" y2="160.02" width="0.1524" layer="91"/>
 <label x="246.38" y="160.02" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="CI"/>
+<wire x1="38.1" y1="104.14" x2="25.4" y2="104.14" width="0.1524" layer="91"/>
+<label x="17.78" y="104.14" size="1.778" layer="95"/>
+</segment>
 </net>
-<net name="N$78" class="0">
+<net name="LED_DATA_5V" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="B1"/>
 <wire x1="236.22" y1="162.56" x2="251.46" y2="162.56" width="0.1524" layer="91"/>
 <label x="246.38" y="162.56" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="DI"/>
+<wire x1="38.1" y1="109.22" x2="25.4" y2="109.22" width="0.1524" layer="91"/>
+<label x="17.78" y="109.22" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

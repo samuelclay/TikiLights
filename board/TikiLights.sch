@@ -3563,7 +3563,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <instance part="GND5" gate="1" x="68.58" y="132.08"/>
 <instance part="GND6" gate="1" x="27.94" y="129.54"/>
 <instance part="SUPPLY4" gate="G$1" x="27.94" y="182.88"/>
-<instance part="P+4" gate="1" x="30.48" y="121.92"/>
+<instance part="P+4" gate="1" x="50.8" y="121.92"/>
 <instance part="GND7" gate="1" x="48.26" y="91.44"/>
 <instance part="P+5" gate="1" x="50.8" y="83.82"/>
 <instance part="GND8" gate="1" x="48.26" y="53.34"/>
@@ -3628,7 +3628,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="P+4" gate="1" pin="+5V"/>
 <wire x1="50.8" y1="114.3" x2="50.8" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="VCC"/>
-<wire x1="50.8" y1="116.84" x2="30.48" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="116.84" x2="50.8" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="114.3" x2="83.82" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="116.84" x2="50.8" y2="116.84" width="0.1524" layer="91"/>
 <junction x="50.8" y="116.84"/>

@@ -4535,7 +4535,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="17.78" y="109.22" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$1" class="0">
+<net name="BRIGHT_SWITCH" class="0">
 <segment>
 <pinref part="SW3" gate="SW" pin="1"/>
 <wire x1="297.18" y1="218.44" x2="281.94" y2="218.44" width="0.1524" layer="91"/>
@@ -4543,9 +4543,10 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="281.94" y1="218.44" x2="254" y2="218.44" width="0.1524" layer="91"/>
 <wire x1="281.94" y1="218.44" x2="281.94" y2="200.66" width="0.1524" layer="91"/>
 <junction x="281.94" y="218.44"/>
+<label x="238.76" y="218.44" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="BRIGHT_ROT_A" class="0">
 <segment>
 <pinref part="SW3" gate="ENCODER" pin="A"/>
 <pinref part="C8" gate="G$1" pin="1"/>
@@ -4557,9 +4558,10 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="287.02" y1="226.06" x2="287.02" y2="210.82" width="0.1524" layer="91"/>
 <junction x="287.02" y="210.82"/>
+<label x="238.76" y="210.82" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$3" class="0">
+<net name="BRIGHT_ROT_B" class="0">
 <segment>
 <pinref part="SW3" gate="ENCODER" pin="B"/>
 <wire x1="297.18" y1="205.74" x2="292.1" y2="205.74" width="0.1524" layer="91"/>
@@ -4571,6 +4573,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="292.1" y1="226.06" x2="292.1" y2="205.74" width="0.1524" layer="91"/>
 <junction x="292.1" y="205.74"/>
+<label x="238.76" y="205.74" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
