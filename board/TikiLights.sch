@@ -3447,7 +3447,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="U$29" library="jos-ph" deviceset="APA102" device="2020"/>
 <part name="U$30" library="jos-ph" deviceset="APA102" device="2020"/>
 <part name="U$31" library="jos-ph" deviceset="APA102" device="2020"/>
-<part name="S1" library="SparkFun-Electromechanical" deviceset="SWITCH-SPDT" device="PTH"/>
+<part name="S1" library="SparkFun-Electromechanical" deviceset="SWITCH-SPDT" device="PTH" value="SPDT"/>
 <part name="P+1" library="supply1" deviceset="+5V" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="P+2" library="supply1" deviceset="VCC" device=""/>
@@ -3477,7 +3477,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="P+6" library="supply1" deviceset="+5V" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
-<part name="U1" library="adafruit" deviceset="TXS0102" device=""/>
+<part name="U1" library="adafruit" deviceset="TXS0102" device="" value="AZ1117E"/>
 <part name="SUPPLY5" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="P+7" library="supply1" deviceset="+5V" device=""/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
@@ -3486,14 +3486,14 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="C8" library="passives" deviceset="CAPACITOR" device="0603_CAP" value="0.1µF"/>
 <part name="C9" library="passives" deviceset="CAPACITOR" device="0603_CAP" value="0.1µF"/>
 <part name="C10" library="passives" deviceset="CAPACITOR" device="0603_CAP" value="0.1µF"/>
-<part name="R1" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603"/>
-<part name="R2" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603"/>
-<part name="R3" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603"/>
+<part name="R1" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="10k"/>
+<part name="R2" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="10k"/>
+<part name="R3" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="10k"/>
 <part name="SUPPLY7" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
-<part name="R4" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603"/>
-<part name="R5" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603"/>
-<part name="R6" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603"/>
+<part name="R4" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="10k"/>
+<part name="R5" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="10k"/>
+<part name="R6" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="10k"/>
 <part name="C11" library="passives" deviceset="CAPACITOR" device="0603_CAP" value="0.1µF"/>
 <part name="C12" library="passives" deviceset="CAPACITOR" device="0603_CAP" value="0.1µF"/>
 <part name="C13" library="passives" deviceset="CAPACITOR" device="0603_CAP" value="0.1µF"/>
@@ -4061,14 +4061,14 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="322.58" y1="226.06" x2="322.58" y2="241.3" width="0.1524" layer="91"/>
 <wire x1="322.58" y1="241.3" x2="307.34" y2="241.3" width="0.1524" layer="91"/>
 <wire x1="307.34" y1="241.3" x2="307.34" y2="243.84" width="0.1524" layer="91"/>
-<pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="287.02" y1="238.76" x2="287.02" y2="241.3" width="0.1524" layer="91"/>
 <junction x="307.34" y="241.3"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="292.1" y1="241.3" x2="307.34" y2="241.3" width="0.1524" layer="91"/>
 <wire x1="292.1" y1="238.76" x2="292.1" y2="241.3" width="0.1524" layer="91"/>
-<wire x1="292.1" y1="241.3" x2="287.02" y2="241.3" width="0.1524" layer="91"/>
-<junction x="287.02" y="241.3"/>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="287.02" y1="238.76" x2="287.02" y2="241.3" width="0.1524" layer="91"/>
+<wire x1="287.02" y1="241.3" x2="292.1" y2="241.3" width="0.1524" layer="91"/>
+<junction x="292.1" y="241.3"/>
 </segment>
 <segment>
 <pinref part="SW4" gate="SW" pin="2"/>
