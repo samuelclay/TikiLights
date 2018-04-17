@@ -1,0 +1,24 @@
+--cpu Cortex-M0
+"stm32demo\startup_stm32f051x8.o"
+"stm32demo\system_stm32f0xx.o"
+"stm32demo\stm32f0xx_hal_tim_ex.o"
+"stm32demo\stm32f0xx_hal_pwr.o"
+"stm32demo\stm32f0xx_hal_rcc_ex.o"
+"stm32demo\stm32f0xx_hal_flash.o"
+"stm32demo\stm32f0xx_hal_dma.o"
+"stm32demo\stm32f0xx_hal_tim.o"
+"stm32demo\stm32f0xx_hal_pwr_ex.o"
+"stm32demo\stm32f0xx_hal_flash_ex.o"
+"stm32demo\stm32f0xx_hal_gpio.o"
+"stm32demo\stm32f0xx_hal.o"
+"stm32demo\stm32f0xx_hal_rcc.o"
+"stm32demo\stm32f0xx_hal_i2c_ex.o"
+"stm32demo\stm32f0xx_hal_i2c.o"
+"stm32demo\stm32f0xx_hal_cortex.o"
+"stm32demo\stm32f0xx_hal_msp.o"
+"stm32demo\main.o"
+"stm32demo\stm32f0xx_it.o"
+--library_type=microlib --strict --scatter "STM32Demo\STM32Demo.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "STM32Demo.map" -o STM32Demo\STM32Demo.axf
