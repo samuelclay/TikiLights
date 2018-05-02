@@ -1,3 +1,4 @@
+
 /**
   ******************************************************************************
   * @file           : main.c
@@ -38,6 +39,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "stm32f0xx_hal.h"
+#include "stdlib.h"
 
 /* USER CODE BEGIN Includes */
 #include "math.h"
@@ -73,6 +75,7 @@ static void MX_SPI1_Init(void);
 /* Private function prototypes -----------------------------------------------*/
 uint32_t RGB(uint8_t R, uint8_t G, uint8_t B);
 uint32_t Hue2RGB(double H, double V);
+uint32_t getTrueRandomNumber(void);
 void TransmitNeopixel(uint32_t * colors);
 void TransmitDotstar(uint32_t * colors);
 /* USER CODE END PFP */
@@ -114,7 +117,7 @@ int main(void)
   MX_DMA_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
-  colors_buffer[0] = 0xFFFFFFFF;
+  colors_buffer[0] = 0;
 	colors_buffer[NLEDS + 1] = 0xFFFFFFFF;
 	
 	GPIOB -> ODR |= GPIO_PIN_1;
@@ -131,14 +134,10 @@ int main(void)
     for(f = 0; f < 360.0; f += 0.1)
 		{
 			for(i = 0; i < NLEDS; i++) {
-				if (i > 5) {
-					colors_array[i] = RGB(0, 0, 0);
+				if(DisplayWhite) {
+					colors_array[i] = RGB(255.0*LedIntensity, 255.0*LedIntensity, 255.0*LedIntensity);
 				} else {
-					if(DisplayWhite) {
-						colors_array[i] = RGB(255.0*LedIntensity, 255.0*LedIntensity, 255.0*LedIntensity);
-					} else {
-						colors_array[i] = Hue2RGB(LedHue, LedIntensity);
-					}
+					colors_array[i] = Hue2RGB(LedHue, LedIntensity);
 				}
 			}
 			TransmitDotstar(colors_buffer);
@@ -266,15 +265,11 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-	GPIO_InitStruct.Pin = GPIO_PIN_1;
-	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-	HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
   /*Configure GPIO pin : Mode_Pin */
-//  GPIO_InitStruct.Pin = Mode_Pin;
-//  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-//  GPIO_InitStruct.Pull = GPIO_NOPULL;
-//  HAL_GPIO_Init(Mode_GPIO_Port, &GPIO_InitStruct);
+  GPIO_InitStruct.Pin = Mode_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(Mode_GPIO_Port, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI0_1_IRQn, 0, 0);
@@ -331,7 +326,7 @@ void TransmitDotstar(uint32_t * colors)
 	HAL_StatusTypeDef spi_status;
 	do
 	{
-		spi_status = HAL_SPI_Transmit_DMA(&hspi1, (uint8_t *)colors, (NLEDS+2)*4);
+		spi_status = HAL_SPI_Transmit(&hspi1, (uint8_t *)colors, (NLEDS+2)*4, HAL_MAX_DELAY);
 	}
 	while(spi_status == HAL_BUSY);
 }
@@ -349,11 +344,8 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 			LedHue = fmod(LedHue, 360);
 			break;
 		case ColorButton_Pin:
-			if(DisplayWhite)
-				DisplayWhite = 0;
-			else
-				DisplayWhite = 1;
-			break;
+			LedHue = rand() % 360;
+   		break;
 		case PwrRotA_Pin:
 			if(GetPwrRotB())
 				LedIntensity += INTENSITY_INCREMENT;
@@ -374,6 +366,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 	
 	GPIOB -> ODR ^= GPIO_PIN_1;
 }
+
 /* USER CODE END 4 */
 
 /**
