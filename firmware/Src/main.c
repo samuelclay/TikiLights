@@ -93,7 +93,6 @@ int main(void)
 {
   /* USER CODE BEGIN 1 */
   int i;
-	double f;
   /* USER CODE END 1 */
 
   /* MCU Configuration----------------------------------------------------------*/
@@ -119,6 +118,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
   colors_buffer[0] = 0;
 	colors_buffer[NLEDS + 1] = 0xFFFFFFFF;
+	srand(123);
+	LedHue = fmod(rand() % 360, 360);
 	
 	GPIOB -> ODR |= GPIO_PIN_1;
   /* USER CODE END 2 */
@@ -131,17 +132,14 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-    for(f = 0; f < 360.0; f += 0.1)
-		{
-			for(i = 0; i < NLEDS; i++) {
-				if(DisplayWhite) {
-					colors_array[i] = RGB(255.0*LedIntensity, 255.0*LedIntensity, 255.0*LedIntensity);
-				} else {
-					colors_array[i] = Hue2RGB(LedHue, LedIntensity);
-				}
+		for(i = 0; i < NLEDS; i++) {
+			if(DisplayWhite) {
+				colors_array[i] = RGB(255.0*LedIntensity, 255.0*LedIntensity, 255.0*LedIntensity);
+			} else {
+				colors_array[i] = Hue2RGB(LedHue, LedIntensity);
 			}
-			TransmitDotstar(colors_buffer);
 		}
+		TransmitDotstar(colors_buffer);
   }
   /* USER CODE END 3 */
 
@@ -344,7 +342,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 			LedHue = fmod(LedHue, 360);
 			break;
 		case ColorButton_Pin:
-			LedHue = rand() % 360;
+			LedHue = fmod(rand() % 360, 360);
    		break;
 		case PwrRotA_Pin:
 			if(GetPwrRotB())
@@ -353,12 +351,12 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 				LedIntensity -= INTENSITY_INCREMENT;
 			if(LedIntensity > 1)
 				LedIntensity = 1;
-			if(LedIntensity < 0)
-				LedIntensity = 0;
+			if(LedIntensity < INTENSITY_INCREMENT)
+				LedIntensity = INTENSITY_INCREMENT;
 			break;
 		case PwrButton_Pin:
-			if(LedIntensity > 0)
-				LedIntensity = 0;
+			if(LedIntensity > INTENSITY_INCREMENT)
+				LedIntensity = INTENSITY_INCREMENT;
 			else
 				LedIntensity = 1;
 			break;
